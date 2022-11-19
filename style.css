@@ -11,7 +11,15 @@
 
 #panel {
     display: block;
-    background-color: blue;
+    background-color: black;
     width: 100vw;
     height: 100vh;
+}
+
+label {
+    color: white;
+}
+
+.sliders {
+    width: 80%;
 }

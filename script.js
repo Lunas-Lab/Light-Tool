@@ -2,7 +2,16 @@ function $(id) {
     return document.getElementById(id);
 }
 
+
 function panelTapped() {
-    console.log("Clicked");
-    document.getElementById("controls").style.width = '75vw';
+    $("controls").style.width = '75vw';
+}
+
+function sliderMove() {
+    var panel = $("panel");
+    $('redLabel').innerText = "Red: " + $('redSlider').value;
+    $('greenLabel').innerText = "Green: " + $('greenSlider').value;
+    $('blueLabel').innerText = "Blue: " + $('blueSlider').value;
+    panel.style.backgroundColor = "rgb(" + $('redSlider').value + ", " + $('greenSlider').value + ", " + $('blueSlider').value + ")";
+    console.log("rgb(" + $('redSlider').value + ", " + $('greenSlider').value + ", " + $('blueSlider').value + ")");
 }

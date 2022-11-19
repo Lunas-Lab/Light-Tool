@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 
 <head>
-    <script src="script.js"/></script>
-    <link rel="stylesheet" href="style.css"></link>
+    <script src="script.js" />
+    </script>
+    <link rel="stylesheet" href="style.css">
+    </link>
     <title>
         Light Tool
     </title>
 </head>
+
 <body>
-    <div id="controls">
-        <div>
-            <input class="sliders" type="range" id="redSlider" min="0" max="255" value="0" step="1" oninput="sliderMove()">
-            <label id="redLabel">Red: 0</label>
-        </div>
-        <div>
-            <input class="sliders" type="range" id="greenSlider" min="0" max="255" value="0" step="1" oninput="sliderMove()">
-            <label id="greenLabel">Green: 0</label>
-        </div>
-        <div>
-            <input class="sliders" type="range" id="blueSlider" min="0" max="255" value="0" step="1" oninput="sliderMove()">
-            <label id="blueLabel">Blue: 0</label>
+    <div id="controlPanel">
+        <a href="#" id="closeButton" onclick="closeControls()">x</a>
+        <div id="controls">
+            <div class="SliderWithDisplay">
+                <input class="Sliders" type="range" id="redSlider" min="0" max="255" value="0" step="1"
+                    oninput="sliderMove()">
+                <label id="redLabel">Red: 0</label>
+            </div>
+            <div class="SliderWithDisplay">
+                <input class="Sliders" type="range" id="greenSlider" min="0" max="255" value="0" step="1"
+                    oninput="sliderMove()">
+                <label id="greenLabel">Green: 0</label>
+            </div>
+            <div class="SliderWithDisplay">
+                <input class="Sliders" type="range" id="blueSlider" min="0" max="255" value="0" step="1"
+                    oninput="sliderMove()">
+                <label id="blueLabel">Blue: 0</label>
+            </div>
         </div>
     </div>
 

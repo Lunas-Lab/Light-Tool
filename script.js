@@ -4,7 +4,7 @@ function $(id) {
 
 
 function panelTapped() {
-    $("controls").style.width = '75vw';
+    $("controlPanel").style.width = '75vw';
 }
 
 function sliderMove() {
@@ -14,4 +14,8 @@ function sliderMove() {
     $('blueLabel').innerText = "Blue: " + $('blueSlider').value;
     panel.style.backgroundColor = "rgb(" + $('redSlider').value + ", " + $('greenSlider').value + ", " + $('blueSlider').value + ")";
     console.log("rgb(" + $('redSlider').value + ", " + $('greenSlider').value + ", " + $('blueSlider').value + ")");
+}
+
+function closeControls() {
+    $("controlPanel").style.width = 0;
 }

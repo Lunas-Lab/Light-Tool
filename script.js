@@ -4,7 +4,13 @@ function $(id) {
 
 
 function panelTapped() {
-    $("controlPanel").style.width = '75vw';
+    var panel = $("controlPanel");
+    if (panel.style.width == '0px') {
+        panel.style.width = '75vw';
+    }
+    else {
+        panel.style.width = 0;
+    }
 }
 
 function sliderMove() {
@@ -12,8 +18,4 @@ function sliderMove() {
     $('greenLabel').innerText = "Green: " + $('greenSlider').value;
     $('blueLabel').innerText = "Blue: " + $('blueSlider').value;
     $('panel').style.backgroundColor = "rgb(" + $('redSlider').value + ", " + $('greenSlider').value + ", " + $('blueSlider').value + ")";
-}
-
-function closeControls() {
-    $("controlPanel").style.width = 0;
 }
